@@ -1,0 +1,125 @@
+/* Reset margin dan padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #333;
+    /* Background Image + Gradient Overlay */
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header utama */
+h1 {
+    text-align: center;
+    color: #fff000;
+    margin-top: 20px;
+}
+
+/* Label dan input */
+label {
+    display: block;
+    margin: 20px auto 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+input[type="number"] {
+    display: block;
+    margin: 0 auto 10px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 12px 20px;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: #fff000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b5277;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Wrapper untuk hasil perhitungan */
+.center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Gaya tabel */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background-color: #4C6A92;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+table tbody tr:nth-child(even) td {
+    background-color: #f1f5fa;
+}
+
+table td.error {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #fdfdfd;
+}
+
+#finalResult {
+    text-align: center;
+    margin-top: 5px;
+    padding: 2px;
+    background-color: #e8f4fa;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
