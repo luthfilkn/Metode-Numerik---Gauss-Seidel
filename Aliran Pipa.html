@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Aliran Pipa</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <!-- Header Utama -->
+    <h1>Perhitungan Nilai Aliran Pipa</h1>
+
+    <!-- Input Jumlah Variabel -->
+    <div class="input-section">
+        <label for="matrixSize">Masukkan jumlah jaringan pipa:</label>
+        <input 
+            type="number" 
+            id="matrixSize" 
+            min="2" 
+            placeholder="Masukkan jumlah jaringan pipa (min 2)" 
+        />
+        <button id="generateMatrix">Hasilkan Jaringan Pipa</button>
+    </div>
+
+    <!-- Input Matriks -->
+    <div id="matrixInputs"></div>
+
+    <!-- Tebakan Awal -->
+    <div id="initialGuess">
+        <h2>Nilai Awal Aliran</h2>
+        <div id="guessInputs"></div> 
+    </div>
+
+    <!-- Input Toleransi -->
+    <div id="toleranceSection">
+        <label for="tolerance">Masukkan Batas Deviasi:</label>
+        <input 
+            type="number" 
+            id="tolerance" 
+            step="0.001" 
+            placeholder="Contoh: 0.001" 
+        />
+    </div>
+
+    <!-- Tombol Hitung -->
+    <button id="calculate" style="display:none;">Hitung Aliran</button>
+
+    <!-- Wrapper untuk Hasil -->
+    <div class="center-wrapper">
+        <h2>Hasil Perhitungan:</h2>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Siklus</th>
+                    <th>Hasil Aliran</th>
+                    <th>Deviasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data akan diisi secara dinamis melalui JavaScript -->
+            </tbody>
+        </table>
+
+        <h2>Nilai Deviasi per siklus:</h2>
+        <table id="errorTable">
+            <thead>
+                <tr>
+                    <th>Siklus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data akan diisi secara dinamis melalui JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Hasil Akhir -->
+    <div id="finalResult"></div>
+
+    <script src="perhitungan.js"></script>
+</body>
+</html>
